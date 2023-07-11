@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "interrupt_manager.h": "c",
+        "main.h": "c",
+        "uart2.h": "c"
+    }
+}

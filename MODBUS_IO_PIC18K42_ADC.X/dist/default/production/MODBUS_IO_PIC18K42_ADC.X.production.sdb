@@ -1,0 +1,1720 @@
+[p GLOBOPT AUTOSTATIC IEEE_FLT IEEE_DBL LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F45K42 ]
+[d frameptr 16353 ]
+"112 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1\MODBUS_IO_PIC18K42_ADC.X\mcc_generated_files/adcc.c
+[e E15906 . `uc
+channel_ANA2 2
+channel_VSS 59
+channel_Temp 60
+channel_DAC1 61
+channel_FVR_Buffer1 62
+channel_FVR_Buffer2 63
+]
+"48 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1/modbus/modbus_app_layer_slave.c
+[e E15917 _BOOL `uc
+FALSE 0
+TRUE 1
+]
+"69
+[e E17098 . `uc
+INTEGER 1
+FLOAT 2
+STRING 3
+]
+"93
+[e E17078 . `uc
+MODBUS_GETADDY 0
+MODBUS_GETFUNC 1
+MODBUS_GETDATA 2
+]
+"124
+[e E16327 _function `uc
+FUNC_READ_COILS 1
+FUNC_READ_DISCRETE_INPUT 2
+FUNC_READ_HOLDING_REGISTERS 3
+FUNC_READ_INPUT_REGISTERS 4
+FUNC_WRITE_SINGLE_COIL 5
+FUNC_WRITE_SINGLE_REGISTER 6
+FUNC_READ_EXCEPTION_STATUS 7
+FUNC_DIAGNOSTICS 8
+FUNC_GET_COMM_EVENT_COUNTER 11
+FUNC_GET_COMM_EVENT_LOG 12
+FUNC_WRITE_MULTIPLE_COILS 15
+FUNC_WRITE_MULTIPLE_REGISTERS 16
+FUNC_REPORT_SLAVE_ID 17
+FUNC_READ_FILE_RECORD 20
+FUNC_WRITE_FILE_RECORD 21
+FUNC_MASK_WRITE_REGISTER 22
+FUNC_READ_WRITE_MULTIPLE_REGISTERS 23
+FUNC_READ_FIFO_QUEUE 24
+]
+[e E2 _exception `uc
+ILLEGAL_FUNCTION 1
+ILLEGAL_DATA_ADDRESS 2
+ILLEGAL_DATA_VALUE 3
+SLAVE_DEVICE_FAILURE 4
+ACKNOWLEDGE 5
+SLAVE_DEVICE_BUSY 6
+MEMORY_PARITY_ERROR 8
+GATEWAY_PATH_UNAVAILABLE 10
+GATEWAY_TARGET_NO_RESPONSE 11
+TIMEOUT 12
+]
+"36 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1/modbus/modbus_phy_layer_rtu_slave.c
+[e E16327 _function `uc
+FUNC_READ_COILS 1
+FUNC_READ_DISCRETE_INPUT 2
+FUNC_READ_HOLDING_REGISTERS 3
+FUNC_READ_INPUT_REGISTERS 4
+FUNC_WRITE_SINGLE_COIL 5
+FUNC_WRITE_SINGLE_REGISTER 6
+FUNC_READ_EXCEPTION_STATUS 7
+FUNC_DIAGNOSTICS 8
+FUNC_GET_COMM_EVENT_COUNTER 11
+FUNC_GET_COMM_EVENT_LOG 12
+FUNC_WRITE_MULTIPLE_COILS 15
+FUNC_WRITE_MULTIPLE_REGISTERS 16
+FUNC_REPORT_SLAVE_ID 17
+FUNC_READ_FILE_RECORD 20
+FUNC_WRITE_FILE_RECORD 21
+FUNC_MASK_WRITE_REGISTER 22
+FUNC_READ_WRITE_MULTIPLE_REGISTERS 23
+FUNC_READ_FIFO_QUEUE 24
+]
+[e E2 _exception `uc
+ILLEGAL_FUNCTION 1
+ILLEGAL_DATA_ADDRESS 2
+ILLEGAL_DATA_VALUE 3
+SLAVE_DEVICE_FAILURE 4
+ACKNOWLEDGE 5
+SLAVE_DEVICE_BUSY 6
+MEMORY_PARITY_ERROR 8
+GATEWAY_PATH_UNAVAILABLE 10
+GATEWAY_TARGET_NO_RESPONSE 11
+TIMEOUT 12
+]
+"39
+[e E16347 _state `uc
+TASK_FUNC_READ_COILS 1
+TASK_FUNC_READ_DISCRETE_INPUT 2
+TASK_FUNC_READ_HOLDING_REGISTERS 3
+TASK_FUNC_READ_INPUT_REGISTERS 4
+TASK_FUNC_WRITE_SINGLE_COIL 5
+TASK_FUNC_WRITE_SINGLE_REGISTER 6
+TASK_FUNC_READ_EXCEPTION_STATUS 7
+TASK_FUNC_DIAGNOSTICS 8
+TASK_FUNC_GET_COMM_EVENT_COUNTER 11
+TASK_FUNC_GET_COMM_EVENT_LOG 12
+TASK_FUNC_WRITE_MULTIPLE_COILS 15
+TASK_FUNC_WRITE_MULTIPLE_REGISTERS 16
+TASK_FUNC_REPORT_SLAVE_ID 17
+TASK_FUNC_READ_FILE_RECORD 20
+TASK_FUNC_WRITE_FILE_RECORD 21
+TASK_FUNC_MASK_WRITE_REGISTER 22
+TASK_FUNC_READ_WRITE_MULTIPLE_REGISTERS 23
+TASK_FUNC_READ_FIFO_QUEUE 24
+TASK_FUNC_RF_READ_HOLDING_REGISTERS 32
+TASK_FUNC_RF_READ_SINGLE_REGISTER 33
+TASK_RESPONSE 34
+TASK_RESPONSE_WRITE 35
+TASK_FUNC_READ_COILS_RESPONSE 36
+TASK_FUNC_READ_DISCRETE_INPUT_RESPONSE 37
+TASK_FUNC_READ_HOLDING_REGISTERS_RESPONSE 38
+TASK_FUNC_READ_INPUT_REGISTERS_RESPONSE 39
+TASK_FUNC_WRITE_SINGLE_COIL_RESPONSE 40
+TASK_FUNC_WRITE_SINGLE_REGISTER_RESPONSE 41
+TASK_FUNC_READ_EXCEPTION_STATUS_RESPONSE 42
+TASK_FUNC_DIAGNOSTICS_RESPONSE 43
+TASK_FUNC_GET_COMM_EVENT_COUNTER_RESPONSE 44
+TASK_FUNC_GET_COMM_EVENT_LOG_RESPONSE 45
+TASK_FUNC_WRITE_MULTIPLE_COILS_RESPONSE 46
+TASK_FUNC_WRITE_MULTIPLE_REGISTERS_RESPONSE 47
+TASK_FUNC_WRITE_FILE_RECORD_RESPONSE 48
+TASK_FUNC_MASK_WRITE_REGISTER_RESPONSE 49
+TASK_FUNC_READ_WRITE_MULTIPLE_REGISTERS_RESPONSE 50
+TASK_FUNC_READ_FIFO_QUEUE_RESPONSE 51
+TASK_FUNC_REPORT_SLAVE_ID_RESPONSE 52
+TASK_FUNC_READ_FILE_RECORD_RESPONSE 53
+TASK_FUNC_RF_READ_HOLDING_REGISTERS_RESPONSE 54
+TASK_FUNC_RF_READ_SINGLE_REGISTER_RESPONSE 55
+TASK_FUNC_RF_WRITE_MULTI_REGISTER_RESPONSE 56
+TASK_FUNC_RF_WRITE_SINGLE_REGISTER_RESPONSE 57
+modbus_ready 58
+]
+"40
+[e E15917 _BOOL `uc
+FALSE 0
+TRUE 1
+]
+"65
+[e E16999 . `uc
+MODBUS_GETADDY 0
+MODBUS_GETFUNC 1
+MODBUS_GETDATA 2
+]
+"61 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1\MODBUS_IO_PIC18K42_ADC.X\main.c
+[e E16430 _BOOL `uc
+FALSE 0
+TRUE 1
+]
+"207
+[e E16852 _function `uc
+FUNC_READ_COILS 1
+FUNC_READ_DISCRETE_INPUT 2
+FUNC_READ_HOLDING_REGISTERS 3
+FUNC_READ_INPUT_REGISTERS 4
+FUNC_WRITE_SINGLE_COIL 5
+FUNC_WRITE_SINGLE_REGISTER 6
+FUNC_READ_EXCEPTION_STATUS 7
+FUNC_DIAGNOSTICS 8
+FUNC_GET_COMM_EVENT_COUNTER 11
+FUNC_GET_COMM_EVENT_LOG 12
+FUNC_WRITE_MULTIPLE_COILS 15
+FUNC_WRITE_MULTIPLE_REGISTERS 16
+FUNC_REPORT_SLAVE_ID 17
+FUNC_READ_FILE_RECORD 20
+FUNC_WRITE_FILE_RECORD 21
+FUNC_MASK_WRITE_REGISTER 22
+FUNC_READ_WRITE_MULTIPLE_REGISTERS 23
+FUNC_READ_FIFO_QUEUE 24
+]
+[e E16840 _exception `uc
+ILLEGAL_FUNCTION 1
+ILLEGAL_DATA_ADDRESS 2
+ILLEGAL_DATA_VALUE 3
+SLAVE_DEVICE_FAILURE 4
+ACKNOWLEDGE 5
+SLAVE_DEVICE_BUSY 6
+MEMORY_PARITY_ERROR 8
+GATEWAY_PATH_UNAVAILABLE 10
+GATEWAY_TARGET_NO_RESPONSE 11
+TIMEOUT 12
+]
+"79 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1\MODBUS_IO_PIC18K42_ADC.X\mcc_generated_files/spi1.c
+[e E358 . `uc
+SPI1_DEFAULT 0
+]
+"5 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1/modbus/source_7seg.c
+[e E16300 . `uc
+led7seg_init 0
+led7seg_1 1
+led7seg_2 2
+led7seg_3 3
+led7seg_4 4
+led7seg_wait 5
+]
+"84 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1/modbus/modbus_app_layer_slave.c
+[v _modbus_init modbus_init `(v  1 e 1 0 ]
+"116
+[v _modbus_kbhit modbus_kbhit `(E15917  1 e 1 0 ]
+"887
+[v _modbus_read_coils_rsp modbus_read_coils_rsp `(v  1 e 1 0 ]
+"932
+[v _modbus_read_holding_registers_rsp modbus_read_holding_registers_rsp `(v  1 e 1 0 ]
+"980
+[v _modbus_write_single_coil_rsp modbus_write_single_coil_rsp `(v  1 e 1 0 ]
+"1000
+[v _modbus_write_single_register_rsp modbus_write_single_register_rsp `(v  1 e 1 0 ]
+"1103
+[v _modbus_write_multiple_coils_rsp modbus_write_multiple_coils_rsp `(v  1 e 1 0 ]
+"1123
+[v _modbus_write_multiple_registers_rsp modbus_write_multiple_registers_rsp `(v  1 e 1 0 ]
+"1314
+[v _modbus_exception_rsp modbus_exception_rsp `(v  1 e 1 0 ]
+"121 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1/modbus/modbus_phy_layer_rtu_slave.c
+[v _RCV_OFF RCV_OFF `(v  1 e 1 0 ]
+"132
+[v _RCV_ON RCV_ON `(v  1 e 1 0 ]
+"186
+[v _modbus_enable_timeout modbus_enable_timeout `(v  1 e 1 0 ]
+[v i2_modbus_enable_timeout modbus_enable_timeout `(v  1 e 1 0 ]
+"199
+[v _modbus_timeout_now modbus_timeout_now `(v  1 e 1 0 ]
+"255
+[v _modbus_check_timeout modbus_check_timeout `(v  1 e 1 0 ]
+"300
+[v _modbus_calc_crc modbus_calc_crc `(v  1 e 1 0 ]
+[v i2_modbus_calc_crc modbus_calc_crc `(v  1 e 1 0 ]
+"313
+[v _modbus_serial_putc modbus_serial_putc `(v  1 e 1 0 ]
+"343
+[v _modbus_serial_send_start modbus_serial_send_start `(v  1 e 1 0 ]
+"365
+[v _modbus_serial_send_stop modbus_serial_send_stop `(v  1 e 1 0 ]
+"413
+[v _incomming_modbus_serial incomming_modbus_serial `(v  1 e 1 0 ]
+"491
+[v _incomming_hmi_serial incomming_hmi_serial `(v  1 e 1 0 ]
+"37 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1/modbus/source_7seg.c
+[v _handle_value handle_value `(v  1 e 1 0 ]
+"46
+[v _display display `(v  1 e 1 0 ]
+"58
+[v _app_led7_init app_led7_init `(v  1 e 1 0 ]
+"67
+[v _app_led7_task app_led7_task `(v  1 e 1 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"86 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 4 0 ]
+"54 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 4 0 ]
+"19 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 4 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"9 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\nf_sprintf.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"11 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\strlen.c
+[v _strlen strlen `(ui  1 e 2 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+"9 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1\MODBUS_IO_PIC18K42_ADC.X\eeprom.c
+[v _EEPROM_Write EEPROM_Write `(v  1 e 1 0 ]
+"34
+[v _EEPROM_Read EEPROM_Read `(uc  1 e 1 0 ]
+"152 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1\MODBUS_IO_PIC18K42_ADC.X\main.c
+[v _main main `(v  1 e 1 0 ]
+"428
+[v _load_eeprom load_eeprom `(v  1 e 1 0 ]
+"442
+[v _make8 make8 `(uc  1 e 1 0 ]
+"449
+[v _make16 make16 `(us  1 e 2 0 ]
+"62 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1\MODBUS_IO_PIC18K42_ADC.X\mcc_generated_files/adcc.c
+[v _ADCC_Initialize ADCC_Initialize `(v  1 e 1 0 ]
+"52 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1\MODBUS_IO_PIC18K42_ADC.X\mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
+"73
+[v _INTERRUPT_InterruptManagerHigh INTERRUPT_InterruptManagerHigh `IIH(v  1 e 1 0 ]
+"83
+[v _INTERRUPT_InterruptManagerLow INTERRUPT_InterruptManagerLow `IIL(v  1 e 1 0 ]
+"50 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1\MODBUS_IO_PIC18K42_ADC.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"65
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+"81
+[v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
+"100
+[v _WWDT_Initialize WWDT_Initialize `(v  1 e 1 0 ]
+"107
+[v _WWDT_SoftEnable WWDT_SoftEnable `(v  1 e 1 0 ]
+"51 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1\MODBUS_IO_PIC18K42_ADC.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"100 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1\MODBUS_IO_PIC18K42_ADC.X\mcc_generated_files/spi1.c
+[v _SPI1_ExchangeByte SPI1_ExchangeByte `(uc  1 e 1 0 ]
+"70 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1\MODBUS_IO_PIC18K42_ADC.X\mcc_generated_files/tmr0.c
+[v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
+"132
+[v _TMR0_ISR TMR0_ISR `(v  1 e 1 0 ]
+"156
+[v _TMR0_SetInterruptHandler TMR0_SetInterruptHandler `(v  1 e 1 0 ]
+"160
+[v _TMR0_DefaultInterruptHandler TMR0_DefaultInterruptHandler `(v  1 e 1 0 ]
+"65 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1\MODBUS_IO_PIC18K42_ADC.X\mcc_generated_files/tmr1.c
+[v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
+"124
+[v _TMR1_WriteTimer TMR1_WriteTimer `(v  1 e 1 0 ]
+"154
+[v _TMR1_ISR TMR1_ISR `(v  1 e 1 0 ]
+"166
+[v _TMR1_SetInterruptHandler TMR1_SetInterruptHandler `(v  1 e 1 0 ]
+"170
+[v _TMR1_DefaultInterruptHandler TMR1_DefaultInterruptHandler `(v  1 e 1 0 ]
+"86 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1\MODBUS_IO_PIC18K42_ADC.X\mcc_generated_files/uart1.c
+[v _UART1_Initialize UART1_Initialize `(v  1 e 1 0 ]
+"163
+[v _UART1_is_tx_done UART1_is_tx_done `(a  1 e 1 0 ]
+"192
+[v _UART1_Write UART1_Write `(v  1 e 1 0 ]
+"203
+[v _UART1_Write_Char UART1_Write_Char `(v  1 e 1 0 ]
+"229
+[v _UART1_Receive_ISR UART1_Receive_ISR `(v  1 e 1 0 ]
+"254
+[v _UART1_RxDataHandler UART1_RxDataHandler `(v  1 e 1 0 ]
+"267
+[v _UART1_DefaultFramingErrorHandler UART1_DefaultFramingErrorHandler `(v  1 e 1 0 ]
+"270
+[v _UART1_DefaultOverrunErrorHandler UART1_DefaultOverrunErrorHandler `(v  1 e 1 0 ]
+"273
+[v _UART1_DefaultErrorHandler UART1_DefaultErrorHandler `(v  1 e 1 0 ]
+"277
+[v _UART1_SetFramingErrorHandler UART1_SetFramingErrorHandler `(v  1 e 1 0 ]
+"281
+[v _UART1_SetOverrunErrorHandler UART1_SetOverrunErrorHandler `(v  1 e 1 0 ]
+"285
+[v _UART1_SetErrorHandler UART1_SetErrorHandler `(v  1 e 1 0 ]
+"289
+[v _UART1_SetRxInterruptHandler UART1_SetRxInterruptHandler `(v  1 e 1 0 ]
+"202 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1\MODBUS_IO_PIC18K42_ADC.X\mcc_generated_files/uart2.c
+[v _UART2_Receive_ISR UART2_Receive_ISR `(v  1 e 1 0 ]
+"228
+[v _UART2_RxDataHandler UART2_RxDataHandler `(v  1 e 1 0 ]
+"240
+[v _UART2_Write_Char UART2_Write_Char `(v  1 e 1 0 ]
+"267
+[v _UART2_SetFramingErrorHandler UART2_SetFramingErrorHandler `(v  1 e 1 0 ]
+"271
+[v _UART2_SetOverrunErrorHandler UART2_SetOverrunErrorHandler `(v  1 e 1 0 ]
+"275
+[v _UART2_SetErrorHandler UART2_SetErrorHandler `(v  1 e 1 0 ]
+"281
+[v _UART2_SetRxInterruptHandler UART2_SetRxInterruptHandler `(v  1 e 1 0 ]
+"48 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1/modbus/modbus_app_layer_slave.c
+[v _finish finish `E15917  1 e 1 0 ]
+"35 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1/modbus/modbus_phy_layer_rtu_slave.c
+[v _modbus_timeout_enabled modbus_timeout_enabled `a  1 e 1 0 ]
+[s S1976 . 259 `uc 1 address 1 0 `uc 1 len 1 1 `E16327 1 func 1 2 `E2 1 error 1 3 `[255]uc 1 data 255 4 ]
+"36
+[v _modbus_rx modbus_rx `S1976  1 e 259 0 ]
+"40
+[v _modbus_serial_new modbus_serial_new `E15917  1 e 1 0 ]
+"43
+[v _count count `uc  1 e 1 0 ]
+"46
+[v _finish_receive finish_receive `E15917  1 e 1 0 ]
+"47
+[v _index index `uc  1 e 1 0 ]
+"48
+[v _data_buffer data_buffer `[20]uc  1 e 20 0 ]
+"49
+[v _count_end count_end `c  1 e 1 0 ]
+"50
+[v _number number `uc  1 e 1 0 ]
+"52
+[v _flag_has_data flag_has_data `E15917  1 e 1 0 ]
+"65
+[v _modbus_serial_state modbus_serial_state `E17078  1 e 1 0 ]
+[u S1888 . 2 `[2]uc 1 b 2 0 `us 1 d 2 0 ]
+"71
+[v _modbus_serial_crc modbus_serial_crc `S1888  1 e 2 0 ]
+"74
+[v _modbus_auchCRCHi modbus_auchCRCHi `C[256]uc  1 e 256 0 ]
+"96
+[v _modbus_auchCRCLo modbus_auchCRCLo `C[256]uc  1 e 256 0 ]
+[s S3093 . 3 `E16300 1 state 1 0 `us 1 value 2 1 ]
+"5 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1/modbus/source_7seg.c
+[v _appled7Data appled7Data `S3093  1 e 3 0 ]
+"30
+[v _values values `[5]uc  1 e 5 0 ]
+"31
+[v _next_index_led next_index_led `i  1 e 2 0 ]
+"32
+[v _hold_regs_7seg hold_regs_7seg `[2]uc  1 e 2 0 ]
+"33
+[v _timer1_7seg timer1_7seg `uc  1 e 1 0 ]
+"35
+[v _seg_data seg_data `[10]uc  1 e 10 0 ]
+"498 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1\MODBUS_IO_PIC18K42_ADC.X/mcc_generated_files/uart1.h
+[v _UART1_RxInterruptHandler UART1_RxInterruptHandler `*.37(v  1 e 2 0 ]
+"498 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1\MODBUS_IO_PIC18K42_ADC.X/mcc_generated_files/uart2.h
+[v _UART2_RxInterruptHandler UART2_RxInterruptHandler `*.37(v  1 e 2 0 ]
+"788 C:\Program Files\Microchip\xc8\v2.41\pic\include\proc\pic18f45k42.h
+[v _WDTCON0 WDTCON0 `VEuc  1 e 1 @14683 ]
+[s S862 . 1 `uc 1 SEN 1 0 :1:0 
+`uc 1 WDTPS 1 0 :5:1 
+]
+"813
+[s S865 . 1 `uc 1 SWDTEN 1 0 :1:0 
+]
+[s S867 . 1 `uc 1 WDTSEN 1 0 :1:0 
+]
+[s S869 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 WDTPS0 1 0 :1:1 
+`uc 1 WDTPS1 1 0 :1:2 
+`uc 1 WDTPS2 1 0 :1:3 
+`uc 1 WDTPS3 1 0 :1:4 
+`uc 1 WDTPS4 1 0 :1:5 
+]
+[u S876 . 1 `S862 1 . 1 0 `S865 1 . 1 0 `S867 1 . 1 0 `S869 1 . 1 0 ]
+[v _WDTCON0bits WDTCON0bits `VES876  1 e 1 @14683 ]
+"863
+[v _WDTCON1 WDTCON1 `VEuc  1 e 1 @14684 ]
+[s S288 . 1 `uc 1 I2C1TXIP 1 0 :1:0 
+`uc 1 I2C1IP 1 0 :1:1 
+`uc 1 I2C1EIP 1 0 :1:2 
+`uc 1 U1RXIP 1 0 :1:3 
+`uc 1 U1TXIP 1 0 :1:4 
+`uc 1 U1EIP 1 0 :1:5 
+`uc 1 U1IP 1 0 :1:6 
+`uc 1 TMR0IP 1 0 :1:7 
+]
+"2968
+[u S297 . 1 `S288 1 . 1 0 ]
+[v _IPR3bits IPR3bits `VES297  1 e 1 @14723 ]
+[s S330 . 1 `uc 1 TMR1IP 1 0 :1:0 
+`uc 1 TMR1GIP 1 0 :1:1 
+`uc 1 TMR2IP 1 0 :1:2 
+`uc 1 CCP1IP 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 NCO1IP 1 0 :1:5 
+`uc 1 CWG1IP 1 0 :1:6 
+`uc 1 CLC1IP 1 0 :1:7 
+]
+"3030
+[u S339 . 1 `S330 1 . 1 0 ]
+[v _IPR4bits IPR4bits `VES339  1 e 1 @14724 ]
+[s S309 . 1 `uc 1 I2C2IP 1 0 :1:0 
+`uc 1 I2C2EIP 1 0 :1:1 
+`uc 1 U2RXIP 1 0 :1:2 
+`uc 1 U2TXIP 1 0 :1:3 
+`uc 1 U2EIP 1 0 :1:4 
+`uc 1 U2IP 1 0 :1:5 
+`uc 1 TMR3IP 1 0 :1:6 
+`uc 1 TMR3GIP 1 0 :1:7 
+]
+"3149
+[u S318 . 1 `S309 1 . 1 0 ]
+[v _IPR6bits IPR6bits `VES318  1 e 1 @14726 ]
+[s S150 . 1 `uc 1 I2C1TXIE 1 0 :1:0 
+`uc 1 I2C1IE 1 0 :1:1 
+`uc 1 I2C1EIE 1 0 :1:2 
+`uc 1 U1RXIE 1 0 :1:3 
+`uc 1 U1TXIE 1 0 :1:4 
+`uc 1 U1EIE 1 0 :1:5 
+`uc 1 U1IE 1 0 :1:6 
+`uc 1 TMR0IE 1 0 :1:7 
+]
+"3533
+[u S159 . 1 `S150 1 . 1 0 ]
+[v _PIE3bits PIE3bits `VES159  1 e 1 @14739 ]
+[s S422 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR1GIE 1 0 :1:1 
+`uc 1 TMR2IE 1 0 :1:2 
+`uc 1 CCP1IE 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 NCO1IE 1 0 :1:5 
+`uc 1 CWG1IE 1 0 :1:6 
+`uc 1 CLC1IE 1 0 :1:7 
+]
+"3595
+[u S431 . 1 `S422 1 . 1 0 ]
+[v _PIE4bits PIE4bits `VES431  1 e 1 @14740 ]
+[s S379 . 1 `uc 1 I2C2IE 1 0 :1:0 
+`uc 1 I2C2EIE 1 0 :1:1 
+`uc 1 U2RXIE 1 0 :1:2 
+`uc 1 U2TXIE 1 0 :1:3 
+`uc 1 U2EIE 1 0 :1:4 
+`uc 1 U2IE 1 0 :1:5 
+`uc 1 TMR3IE 1 0 :1:6 
+`uc 1 TMR3GIE 1 0 :1:7 
+]
+"3714
+[u S388 . 1 `S379 1 . 1 0 ]
+[v _PIE6bits PIE6bits `VES388  1 e 1 @14742 ]
+[s S3013 . 1 `uc 1 DMA1SCNTIF 1 0 :1:0 
+`uc 1 DMA1DCNTIF 1 0 :1:1 
+`uc 1 DMA1ORIF 1 0 :1:2 
+`uc 1 DMA1AIF 1 0 :1:3 
+`uc 1 SPI1RXIF 1 0 :1:4 
+`uc 1 SPI1TXIF 1 0 :1:5 
+`uc 1 SPI1IF 1 0 :1:6 
+`uc 1 I2C1RXIF 1 0 :1:7 
+]
+"4036
+[u S3022 . 1 `S3013 1 . 1 0 ]
+[v _PIR2bits PIR2bits `VES3022  1 e 1 @14754 ]
+[s S129 . 1 `uc 1 I2C1TXIF 1 0 :1:0 
+`uc 1 I2C1IF 1 0 :1:1 
+`uc 1 I2C1EIF 1 0 :1:2 
+`uc 1 U1RXIF 1 0 :1:3 
+`uc 1 U1TXIF 1 0 :1:4 
+`uc 1 U1EIF 1 0 :1:5 
+`uc 1 U1IF 1 0 :1:6 
+`uc 1 TMR0IF 1 0 :1:7 
+]
+"4098
+[u S138 . 1 `S129 1 . 1 0 ]
+[v _PIR3bits PIR3bits `VES138  1 e 1 @14755 ]
+[s S443 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR1GIF 1 0 :1:1 
+`uc 1 TMR2IF 1 0 :1:2 
+`uc 1 CCP1IF 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 NCO1IF 1 0 :1:5 
+`uc 1 CWG1IF 1 0 :1:6 
+`uc 1 CLC1IF 1 0 :1:7 
+]
+"4160
+[u S452 . 1 `S443 1 . 1 0 ]
+[v _PIR4bits PIR4bits `VES452  1 e 1 @14756 ]
+[s S400 . 1 `uc 1 I2C2IF 1 0 :1:0 
+`uc 1 I2C2EIF 1 0 :1:1 
+`uc 1 U2RXIF 1 0 :1:2 
+`uc 1 U2TXIF 1 0 :1:3 
+`uc 1 U2EIF 1 0 :1:4 
+`uc 1 U2IF 1 0 :1:5 
+`uc 1 TMR3IF 1 0 :1:6 
+`uc 1 TMR3GIF 1 0 :1:7 
+]
+"4279
+[u S409 . 1 `S400 1 . 1 0 ]
+[v _PIR6bits PIR6bits `VES409  1 e 1 @14758 ]
+"4460
+[v _PMD0 PMD0 `VEuc  1 e 1 @14784 ]
+"4522
+[v _PMD1 PMD1 `VEuc  1 e 1 @14785 ]
+"4584
+[v _PMD2 PMD2 `VEuc  1 e 1 @14786 ]
+"4629
+[v _PMD3 PMD3 `VEuc  1 e 1 @14787 ]
+"4691
+[v _PMD4 PMD4 `VEuc  1 e 1 @14788 ]
+"4724
+[v _PMD5 PMD5 `VEuc  1 e 1 @14789 ]
+"4769
+[v _PMD6 PMD6 `VEuc  1 e 1 @14790 ]
+"4819
+[v _PMD7 PMD7 `VEuc  1 e 1 @14791 ]
+"4958
+[v _OSCCON1 OSCCON1 `VEuc  1 e 1 @14809 ]
+"5098
+[v _OSCCON3 OSCCON3 `VEuc  1 e 1 @14811 ]
+"5250
+[v _OSCEN OSCEN `VEuc  1 e 1 @14813 ]
+"5301
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @14814 ]
+"5405
+[v _OSCFRQ OSCFRQ `VEuc  1 e 1 @14815 ]
+"5485
+[v _NVMADRL NVMADRL `VEuc  1 e 1 @14816 ]
+"5613
+[v _NVMDAT NVMDAT `VEuc  1 e 1 @14819 ]
+"5741
+[v _NVMCON1 NVMCON1 `VEuc  1 e 1 @14821 ]
+[s S25 . 1 `uc 1 RD 1 0 :1:0 
+`uc 1 WR 1 0 :1:1 
+`uc 1 WREN 1 0 :1:2 
+`uc 1 WRERR 1 0 :1:3 
+`uc 1 FREE 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 REG 1 0 :2:6 
+]
+"5771
+[s S33 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 REG0 1 0 :1:6 
+`uc 1 REG1 1 0 :1:7 
+]
+[s S37 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 NVMREG 1 0 :2:6 
+]
+[s S40 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 NVMREG0 1 0 :1:6 
+`uc 1 NVMREG1 1 0 :1:7 
+]
+[u S44 . 1 `S25 1 . 1 0 `S33 1 . 1 0 `S37 1 . 1 0 `S40 1 . 1 0 ]
+[v _NVMCON1bits NVMCON1bits `VES44  1 e 1 @14821 ]
+"5831
+[v _NVMCON2 NVMCON2 `VEuc  1 e 1 @14822 ]
+"7311
+[v _RC6PPS RC6PPS `VEuc  1 e 1 @14870 ]
+"7961
+[v _ANSELA ANSELA `VEuc  1 e 1 @14912 ]
+"8023
+[v _WPUA WPUA `VEuc  1 e 1 @14913 ]
+"8085
+[v _ODCONA ODCONA `VEuc  1 e 1 @14914 ]
+"8147
+[v _SLRCONA SLRCONA `VEuc  1 e 1 @14915 ]
+"8209
+[v _INLVLA INLVLA `VEuc  1 e 1 @14916 ]
+"8581
+[v _ANSELB ANSELB `VEuc  1 e 1 @14928 ]
+"8643
+[v _WPUB WPUB `VEuc  1 e 1 @14929 ]
+"8705
+[v _ODCONB ODCONB `VEuc  1 e 1 @14930 ]
+"8767
+[v _SLRCONB SLRCONB `VEuc  1 e 1 @14931 ]
+"8829
+[v _INLVLB INLVLB `VEuc  1 e 1 @14932 ]
+"9201
+[v _RB1I2C RB1I2C `VEuc  1 e 1 @14938 ]
+"9309
+[v _RB2I2C RB2I2C `VEuc  1 e 1 @14939 ]
+"9417
+[v _ANSELC ANSELC `VEuc  1 e 1 @14944 ]
+"9479
+[v _WPUC WPUC `VEuc  1 e 1 @14945 ]
+"9541
+[v _ODCONC ODCONC `VEuc  1 e 1 @14946 ]
+"9603
+[v _SLRCONC SLRCONC `VEuc  1 e 1 @14947 ]
+"9665
+[v _INLVLC INLVLC `VEuc  1 e 1 @14948 ]
+"10037
+[v _RC3I2C RC3I2C `VEuc  1 e 1 @14954 ]
+"10145
+[v _RC4I2C RC4I2C `VEuc  1 e 1 @14955 ]
+"10253
+[v _ANSELD ANSELD `VEuc  1 e 1 @14960 ]
+"10315
+[v _WPUD WPUD `VEuc  1 e 1 @14961 ]
+"10377
+[v _ODCOND ODCOND `VEuc  1 e 1 @14962 ]
+"10439
+[v _SLRCOND SLRCOND `VEuc  1 e 1 @14963 ]
+"10501
+[v _INLVLD INLVLD `VEuc  1 e 1 @14964 ]
+"10687
+[v _RD0I2C RD0I2C `VEuc  1 e 1 @14970 ]
+"10795
+[v _RD1I2C RD1I2C `VEuc  1 e 1 @14971 ]
+"10903
+[v _ANSELE ANSELE `VEuc  1 e 1 @14976 ]
+"10935
+[v _WPUE WPUE `VEuc  1 e 1 @14977 ]
+"10973
+[v _ODCONE ODCONE `VEuc  1 e 1 @14978 ]
+"11005
+[v _SLRCONE SLRCONE `VEuc  1 e 1 @14979 ]
+"11037
+[v _INLVLE INLVLE `VEuc  1 e 1 @14980 ]
+"12018
+[v _U1RXPPS U1RXPPS `VEuc  1 e 1 @15077 ]
+"22592
+[v _SPI1RXB SPI1RXB `VEuc  1 e 1 @15632 ]
+"22662
+[v _SPI1TXB SPI1TXB `VEuc  1 e 1 @15633 ]
+"22739
+[v _SPI1TCNTL SPI1TCNTL `VEuc  1 e 1 @15634 ]
+"22779
+[v _SPI1CON0 SPI1CON0 `VEuc  1 e 1 @15636 ]
+"22845
+[v _SPI1CON1 SPI1CON1 `VEuc  1 e 1 @15637 ]
+"22947
+[v _SPI1CON2 SPI1CON2 `VEuc  1 e 1 @15638 ]
+"23147
+[v _SPI1BAUD SPI1BAUD `VEuc  1 e 1 @15641 ]
+"23401
+[v _SPI1CLK SPI1CLK `VEuc  1 e 1 @15644 ]
+"25523
+[v _U2RXB U2RXB `VEuc  1 e 1 @15824 ]
+"25561
+[v _U2TXB U2TXB `VEuc  1 e 1 @15826 ]
+"25606
+[v _U2P1L U2P1L `VEuc  1 e 1 @15828 ]
+"25633
+[v _U2P2L U2P2L `VEuc  1 e 1 @15830 ]
+"25660
+[v _U2P3L U2P3L `VEuc  1 e 1 @15832 ]
+"25680
+[v _U2CON0 U2CON0 `VEuc  1 e 1 @15834 ]
+"25796
+[v _U2CON1 U2CON1 `VEuc  1 e 1 @15835 ]
+"25876
+[v _U2CON2 U2CON2 `VEuc  1 e 1 @15836 ]
+"26015
+[v _U2BRGL U2BRGL `VEuc  1 e 1 @15837 ]
+"26035
+[v _U2BRGH U2BRGH `VEuc  1 e 1 @15838 ]
+"26055
+[v _U2FIFO U2FIFO `VEuc  1 e 1 @15839 ]
+"26185
+[v _U2UIR U2UIR `VEuc  1 e 1 @15840 ]
+"26241
+[v _U2ERRIR U2ERRIR `VEuc  1 e 1 @15841 ]
+[s S677 . 1 `uc 1 TXCIF 1 0 :1:0 
+`uc 1 RXFOIF 1 0 :1:1 
+`uc 1 RXBKIF 1 0 :1:2 
+`uc 1 FERIF 1 0 :1:3 
+`uc 1 CERIF 1 0 :1:4 
+`uc 1 ABDOVF 1 0 :1:5 
+`uc 1 PERIF 1 0 :1:6 
+`uc 1 TXMTIF 1 0 :1:7 
+]
+"26268
+[s S1142 . 1 `uc 1 U2TXCIF 1 0 :1:0 
+`uc 1 U2RXFOIF 1 0 :1:1 
+`uc 1 U2RXBKIF 1 0 :1:2 
+`uc 1 U2FERIF 1 0 :1:3 
+`uc 1 U2CERIF 1 0 :1:4 
+`uc 1 U2ABDOVF 1 0 :1:5 
+`uc 1 U2PERIF 1 0 :1:6 
+`uc 1 U2TXMTIF 1 0 :1:7 
+]
+[u S1151 . 1 `S677 1 . 1 0 `S1142 1 . 1 0 ]
+[v _U2ERRIRbits U2ERRIRbits `VES1151  1 e 1 @15841 ]
+"26353
+[v _U2ERRIE U2ERRIE `VEuc  1 e 1 @15842 ]
+"26465
+[v _U1RXB U1RXB `VEuc  1 e 1 @15848 ]
+"26523
+[v _U1TXB U1TXB `VEuc  1 e 1 @15850 ]
+"26588
+[v _U1P1L U1P1L `VEuc  1 e 1 @15852 ]
+"26608
+[v _U1P1H U1P1H `VEuc  1 e 1 @15853 ]
+"26635
+[v _U1P2L U1P2L `VEuc  1 e 1 @15854 ]
+"26655
+[v _U1P2H U1P2H `VEuc  1 e 1 @15855 ]
+"26682
+[v _U1P3L U1P3L `VEuc  1 e 1 @15856 ]
+"26702
+[v _U1P3H U1P3H `VEuc  1 e 1 @15857 ]
+"26722
+[v _U1CON0 U1CON0 `VEuc  1 e 1 @15858 ]
+"26850
+[v _U1CON1 U1CON1 `VEuc  1 e 1 @15859 ]
+"26930
+[v _U1CON2 U1CON2 `VEuc  1 e 1 @15860 ]
+"27079
+[v _U1BRGL U1BRGL `VEuc  1 e 1 @15861 ]
+"27099
+[v _U1BRGH U1BRGH `VEuc  1 e 1 @15862 ]
+"27119
+[v _U1FIFO U1FIFO `VEuc  1 e 1 @15863 ]
+"27249
+[v _U1UIR U1UIR `VEuc  1 e 1 @15864 ]
+"27305
+[v _U1ERRIR U1ERRIR `VEuc  1 e 1 @15865 ]
+"27332
+[s S686 . 1 `uc 1 U1TXCIF 1 0 :1:0 
+`uc 1 U1RXFOIF 1 0 :1:1 
+`uc 1 U1RXBKIF 1 0 :1:2 
+`uc 1 U1FERIF 1 0 :1:3 
+`uc 1 U1CERIF 1 0 :1:4 
+`uc 1 U1ABDOVF 1 0 :1:5 
+`uc 1 U1PERIF 1 0 :1:6 
+`uc 1 U1TXMTIF 1 0 :1:7 
+]
+[u S695 . 1 `S677 1 . 1 0 `S686 1 . 1 0 ]
+[v _U1ERRIRbits U1ERRIRbits `VES695  1 e 1 @15865 ]
+"27417
+[v _U1ERRIE U1ERRIE `VEuc  1 e 1 @15866 ]
+"28575
+[v _ADLTHL ADLTHL `VEuc  1 e 1 @16094 ]
+"28703
+[v _ADLTHH ADLTHH `VEuc  1 e 1 @16095 ]
+"28838
+[v _ADUTHL ADUTHL `VEuc  1 e 1 @16096 ]
+"28966
+[v _ADUTHH ADUTHH `VEuc  1 e 1 @16097 ]
+"29101
+[v _ADERRL ADERRL `VEuc  1 e 1 @16098 ]
+"29229
+[v _ADERRH ADERRH `VEuc  1 e 1 @16099 ]
+"29364
+[v _ADSTPTL ADSTPTL `VEuc  1 e 1 @16100 ]
+"29492
+[v _ADSTPTH ADSTPTH `VEuc  1 e 1 @16101 ]
+"29627
+[v _ADFLTRL ADFLTRL `VEuc  1 e 1 @16102 ]
+"29755
+[v _ADFLTRH ADFLTRH `VEuc  1 e 1 @16103 ]
+"29892
+[v _ADACCL ADACCL `VEuc  1 e 1 @16104 ]
+"30020
+[v _ADACCH ADACCH `VEuc  1 e 1 @16105 ]
+"30148
+[v _ADACCU ADACCU `VEuc  1 e 1 @16106 ]
+"30276
+[v _ADCNT ADCNT `VEuc  1 e 1 @16107 ]
+"30404
+[v _ADRPT ADRPT `VEuc  1 e 1 @16108 ]
+"30539
+[v _ADPREVL ADPREVL `VEuc  1 e 1 @16109 ]
+"30667
+[v _ADPREVH ADPREVH `VEuc  1 e 1 @16110 ]
+"30802
+[v _ADRESL ADRESL `VEuc  1 e 1 @16111 ]
+"30930
+[v _ADRESH ADRESH `VEuc  1 e 1 @16112 ]
+"31050
+[v _ADPCH ADPCH `VEuc  1 e 1 @16113 ]
+"31161
+[v _ADACQL ADACQL `VEuc  1 e 1 @16115 ]
+"31289
+[v _ADACQH ADACQH `VEuc  1 e 1 @16116 ]
+"31381
+[v _ADCAP ADCAP `VEuc  1 e 1 @16117 ]
+"31480
+[v _ADPREL ADPREL `VEuc  1 e 1 @16118 ]
+"31608
+[v _ADPREH ADPREH `VEuc  1 e 1 @16119 ]
+"31700
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @16120 ]
+"31818
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @16121 ]
+"31884
+[v _ADCON2 ADCON2 `VEuc  1 e 1 @16122 ]
+"32062
+[v _ADCON3 ADCON3 `VEuc  1 e 1 @16123 ]
+"32192
+[v _ADSTAT ADSTAT `VEuc  1 e 1 @16124 ]
+"32317
+[v _ADREF ADREF `VEuc  1 e 1 @16125 ]
+"32399
+[v _ADACT ADACT `VEuc  1 e 1 @16126 ]
+"32491
+[v _ADCLK ADCLK `VEuc  1 e 1 @16127 ]
+"44129
+[v _TMR1L TMR1L `VEuc  1 e 1 @16304 ]
+"44199
+[v _TMR1H TMR1H `VEuc  1 e 1 @16305 ]
+"44269
+[v _T1CON T1CON `VEuc  1 e 1 @16306 ]
+[s S1727 . 1 `uc 1 ON 1 0 :1:0 
+`uc 1 RD16 1 0 :1:1 
+`uc 1 NOT_SYNC 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 CKPS 1 0 :2:4 
+]
+"44305
+[s S1733 . 1 `uc 1 TMR1ON 1 0 :1:0 
+`uc 1 T1RD16 1 0 :1:1 
+`uc 1 NOT_T1SYNC 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 T1CKPS0 1 0 :1:4 
+`uc 1 T1CKPS1 1 0 :1:5 
+]
+"44305
+[s S1740 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 CKPS0 1 0 :1:4 
+`uc 1 CKPS1 1 0 :1:5 
+]
+"44305
+[s S1744 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 RD161 1 0 :1:1 
+]
+"44305
+[u S1747 . 1 `S1727 1 . 1 0 `S1733 1 . 1 0 `S1740 1 . 1 0 `S1744 1 . 1 0 ]
+"44305
+"44305
+[v _T1CONbits T1CONbits `VES1747  1 e 1 @16306 ]
+"44459
+[v _T1GCON T1GCON `VEuc  1 e 1 @16307 ]
+"44673
+[v _T1GATE T1GATE `VEuc  1 e 1 @16308 ]
+"44839
+[v _T1CLK T1CLK `VEuc  1 e 1 @16309 ]
+"45005
+[v _TMR0L TMR0L `VEuc  1 e 1 @16310 ]
+"45143
+[v _TMR0H TMR0H `VEuc  1 e 1 @16311 ]
+"45397
+[v _T0CON0 T0CON0 `VEuc  1 e 1 @16312 ]
+"45495
+[v _T0CON1 T0CON1 `VEuc  1 e 1 @16313 ]
+"45637
+[v _LATA LATA `VEuc  1 e 1 @16314 ]
+[s S2531 . 1 `uc 1 LATA0 1 0 :1:0 
+`uc 1 LATA1 1 0 :1:1 
+`uc 1 LATA2 1 0 :1:2 
+`uc 1 LATA3 1 0 :1:3 
+`uc 1 LATA4 1 0 :1:4 
+`uc 1 LATA5 1 0 :1:5 
+`uc 1 LATA6 1 0 :1:6 
+`uc 1 LATA7 1 0 :1:7 
+]
+"45664
+[s S2540 . 1 `uc 1 LA0 1 0 :1:0 
+`uc 1 LA1 1 0 :1:1 
+`uc 1 LA2 1 0 :1:2 
+`uc 1 LA3 1 0 :1:3 
+`uc 1 LA4 1 0 :1:4 
+`uc 1 LA5 1 0 :1:5 
+`uc 1 LA6 1 0 :1:6 
+`uc 1 LA7 1 0 :1:7 
+]
+"45664
+[u S2549 . 1 `S2531 1 . 1 0 `S2540 1 . 1 0 ]
+"45664
+"45664
+[v _LATAbits LATAbits `VES2549  1 e 1 @16314 ]
+"45749
+[v _LATB LATB `VEuc  1 e 1 @16315 ]
+[s S3138 . 1 `uc 1 LATB0 1 0 :1:0 
+`uc 1 LATB1 1 0 :1:1 
+`uc 1 LATB2 1 0 :1:2 
+`uc 1 LATB3 1 0 :1:3 
+`uc 1 LATB4 1 0 :1:4 
+`uc 1 LATB5 1 0 :1:5 
+`uc 1 LATB6 1 0 :1:6 
+`uc 1 LATB7 1 0 :1:7 
+]
+"45776
+[s S3147 . 1 `uc 1 LB0 1 0 :1:0 
+`uc 1 LB1 1 0 :1:1 
+`uc 1 LB2 1 0 :1:2 
+`uc 1 LB3 1 0 :1:3 
+`uc 1 LB4 1 0 :1:4 
+`uc 1 LB5 1 0 :1:5 
+`uc 1 LB6 1 0 :1:6 
+`uc 1 LB7 1 0 :1:7 
+]
+"45776
+[u S3156 . 1 `S3138 1 . 1 0 `S3147 1 . 1 0 ]
+"45776
+"45776
+[v _LATBbits LATBbits `VES3156  1 e 1 @16315 ]
+"45861
+[v _LATC LATC `VEuc  1 e 1 @16316 ]
+[s S2418 . 1 `uc 1 LATC0 1 0 :1:0 
+`uc 1 LATC1 1 0 :1:1 
+`uc 1 LATC2 1 0 :1:2 
+`uc 1 LATC3 1 0 :1:3 
+`uc 1 LATC4 1 0 :1:4 
+`uc 1 LATC5 1 0 :1:5 
+`uc 1 LATC6 1 0 :1:6 
+`uc 1 LATC7 1 0 :1:7 
+]
+"45888
+[s S2427 . 1 `uc 1 LC0 1 0 :1:0 
+`uc 1 LC1 1 0 :1:1 
+`uc 1 LC2 1 0 :1:2 
+`uc 1 LC3 1 0 :1:3 
+`uc 1 LC4 1 0 :1:4 
+`uc 1 LC5 1 0 :1:5 
+`uc 1 LC6 1 0 :1:6 
+`uc 1 LC7 1 0 :1:7 
+]
+"45888
+[u S2436 . 1 `S2418 1 . 1 0 `S2427 1 . 1 0 ]
+"45888
+"45888
+[v _LATCbits LATCbits `VES2436  1 e 1 @16316 ]
+"45973
+[v _LATD LATD `VEuc  1 e 1 @16317 ]
+[s S2290 . 1 `uc 1 LATD0 1 0 :1:0 
+`uc 1 LATD1 1 0 :1:1 
+`uc 1 LATD2 1 0 :1:2 
+`uc 1 LATD3 1 0 :1:3 
+`uc 1 LATD4 1 0 :1:4 
+`uc 1 LATD5 1 0 :1:5 
+`uc 1 LATD6 1 0 :1:6 
+`uc 1 LATD7 1 0 :1:7 
+]
+"46000
+[s S2299 . 1 `uc 1 LD0 1 0 :1:0 
+`uc 1 LD1 1 0 :1:1 
+`uc 1 LD2 1 0 :1:2 
+`uc 1 LD3 1 0 :1:3 
+`uc 1 LD4 1 0 :1:4 
+`uc 1 LD5 1 0 :1:5 
+`uc 1 LD6 1 0 :1:6 
+`uc 1 LD7 1 0 :1:7 
+]
+"46000
+[u S2308 . 1 `S2290 1 . 1 0 `S2299 1 . 1 0 ]
+"46000
+"46000
+[v _LATDbits LATDbits `VES2308  1 e 1 @16317 ]
+"46085
+[v _LATE LATE `VEuc  1 e 1 @16318 ]
+[s S3118 . 1 `uc 1 LATE0 1 0 :1:0 
+`uc 1 LATE1 1 0 :1:1 
+`uc 1 LATE2 1 0 :1:2 
+]
+"46102
+[s S3122 . 1 `uc 1 LE0 1 0 :1:0 
+`uc 1 LE1 1 0 :1:1 
+`uc 1 LE2 1 0 :1:2 
+]
+"46102
+[u S3126 . 1 `S3118 1 . 1 0 `S3122 1 . 1 0 ]
+"46102
+"46102
+[v _LATEbits LATEbits `VES3126  1 e 1 @16318 ]
+"46137
+[v _TRISA TRISA `VEuc  1 e 1 @16322 ]
+"46199
+[v _TRISB TRISB `VEuc  1 e 1 @16323 ]
+"46261
+[v _TRISC TRISC `VEuc  1 e 1 @16324 ]
+"46323
+[v _TRISD TRISD `VEuc  1 e 1 @16325 ]
+"46385
+[v _TRISE TRISE `VEuc  1 e 1 @16326 ]
+[s S2744 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 RC3 1 0 :1:3 
+`uc 1 RC4 1 0 :1:4 
+`uc 1 RC5 1 0 :1:5 
+`uc 1 RC6 1 0 :1:6 
+`uc 1 RC7 1 0 :1:7 
+]
+"46558
+[u S2753 . 1 `S2744 1 . 1 0 ]
+"46558
+"46558
+[v _PORTCbits PORTCbits `VES2753  1 e 1 @16332 ]
+[s S2765 . 1 `uc 1 RD0 1 0 :1:0 
+`uc 1 RD1 1 0 :1:1 
+`uc 1 RD2 1 0 :1:2 
+`uc 1 RD3 1 0 :1:3 
+`uc 1 RD4 1 0 :1:4 
+`uc 1 RD5 1 0 :1:5 
+`uc 1 RD6 1 0 :1:6 
+`uc 1 RD7 1 0 :1:7 
+]
+"46620
+[u S2774 . 1 `S2765 1 . 1 0 ]
+"46620
+"46620
+[v _PORTDbits PORTDbits `VES2774  1 e 1 @16333 ]
+[s S71 . 1 `uc 1 INT0EDG 1 0 :1:0 
+`uc 1 INT1EDG 1 0 :1:1 
+`uc 1 INT2EDG 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 IPEN 1 0 :1:5 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"46723
+[s S79 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 GIEH 1 0 :1:7 
+]
+"46723
+[u S82 . 1 `S71 1 . 1 0 `S79 1 . 1 0 ]
+"46723
+"46723
+[v _INTCON0bits INTCON0bits `VES82  1 e 1 @16338 ]
+[s S896 . 1 `uc 1 NOT_BOR 1 0 :1:0 
+]
+"47659
+[s S898 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 NOT_POR 1 0 :1:1 
+]
+"47659
+[s S901 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_RI 1 0 :1:2 
+]
+"47659
+[s S904 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 NOT_RMCLR 1 0 :1:3 
+]
+"47659
+[s S907 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 NOT_RWDT 1 0 :1:4 
+]
+"47659
+[s S910 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 NOT_WDTWV 1 0 :1:5 
+]
+"47659
+[s S913 . 1 `uc 1 nBOR 1 0 :1:0 
+`uc 1 nPOR 1 0 :1:1 
+`uc 1 nRI 1 0 :1:2 
+`uc 1 nRMCLR 1 0 :1:3 
+`uc 1 nRWDT 1 0 :1:4 
+`uc 1 nWDTWV 1 0 :1:5 
+`uc 1 STKUNF 1 0 :1:6 
+`uc 1 STKOVF 1 0 :1:7 
+]
+"47659
+[s S922 . 1 `uc 1 BOR 1 0 :1:0 
+`uc 1 POR 1 0 :1:1 
+`uc 1 RI 1 0 :1:2 
+`uc 1 RMCLR 1 0 :1:3 
+`uc 1 RWDT 1 0 :1:4 
+`uc 1 WDTWV 1 0 :1:5 
+]
+"47659
+[u S929 . 1 `S896 1 . 1 0 `S898 1 . 1 0 `S901 1 . 1 0 `S904 1 . 1 0 `S907 1 . 1 0 `S910 1 . 1 0 `S913 1 . 1 0 `S922 1 . 1 0 ]
+"47659
+"47659
+[v _PCON0bits PCON0bits `VES929  1 e 1 @16368 ]
+"54689
+[v _PLLR PLLR `VEb  1 e 0 @118496 ]
+"59 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1\MODBUS_IO_PIC18K42_ADC.X\main.c
+[v _timer_tick timer_tick `ul  1 e 4 0 ]
+"61
+[v _events_coils_output events_coils_output `E16430  1 e 1 0 ]
+"62
+[v _data_read_coil data_read_coil `[4]uc  1 e 4 0 ]
+"75
+[v _modbus_address modbus_address `uc  1 e 1 0 ]
+"79
+[v _flag_write flag_write `uc  1 e 1 0 ]
+"84
+[v _spi_reset spi_reset `ul  1 e 4 0 ]
+"119
+[v _hold_regs_row_byte hold_regs_row_byte `[250]uc  1 e 250 0 ]
+"120
+[v _coils coils `[4]uc  1 e 4 0 ]
+"121
+[v _hold_regs_row1 hold_regs_row1 `[240]us  1 e 480 0 ]
+"59 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1\MODBUS_IO_PIC18K42_ADC.X\mcc_generated_files/tmr0.c
+[v _timer0ReloadVal16bit timer0ReloadVal16bit `VEus  1 e 2 0 ]
+"60
+[v _timer_modbus timer_modbus `VEus  1 e 2 0 ]
+"68
+[v _TMR0_InterruptHandler TMR0_InterruptHandler `*.37(v  1 e 2 0 ]
+"57 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1\MODBUS_IO_PIC18K42_ADC.X\mcc_generated_files/tmr1.c
+[v _timer1ReloadVal timer1ReloadVal `VEus  1 e 2 0 ]
+"58
+[v _TMR1_InterruptHandler TMR1_InterruptHandler `*.37(v  1 e 2 0 ]
+"68 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1\MODBUS_IO_PIC18K42_ADC.X\mcc_generated_files/uart1.c
+[v _uart1RxHead uart1RxHead `VEuc  1 s 1 uart1RxHead ]
+"69
+[v _uart1RxTail uart1RxTail `VEuc  1 s 1 uart1RxTail ]
+"70
+[v _uart1RxBuffer uart1RxBuffer `VE[8]uc  1 s 8 uart1RxBuffer ]
+[s S540 . 1 `uc 1 perr 1 0 :1:0 
+`uc 1 ferr 1 0 :1:1 
+`uc 1 oerr 1 0 :1:2 
+`uc 1 reserved 1 0 :5:3 
+]
+"71
+[u S545 . 1 `S540 1 . 1 0 `uc 1 status 1 0 ]
+[v _uart1RxStatusBuffer uart1RxStatusBuffer `VE[8]S545  1 s 8 uart1RxStatusBuffer ]
+"72
+[v _uart1RxCount uart1RxCount `VEuc  1 e 1 0 ]
+"73
+[v _uart1RxLastError uart1RxLastError `VES545  1 s 1 uart1RxLastError ]
+"78
+[v _UART1_FramingErrorHandler UART1_FramingErrorHandler `*.37(v  1 e 2 0 ]
+"79
+[v _UART1_OverrunErrorHandler UART1_OverrunErrorHandler `*.37(v  1 e 2 0 ]
+"80
+[v _UART1_ErrorHandler UART1_ErrorHandler `*.37(v  1 e 2 0 ]
+"66 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1\MODBUS_IO_PIC18K42_ADC.X\mcc_generated_files/uart2.c
+[v _uart2RxHead uart2RxHead `VEuc  1 s 1 uart2RxHead ]
+"67
+[v _uart2RxTail uart2RxTail `VEuc  1 s 1 uart2RxTail ]
+"68
+[v _uart2RxBuffer uart2RxBuffer `VE[8]uc  1 s 8 uart2RxBuffer ]
+"69
+[v _uart2RxStatusBuffer uart2RxStatusBuffer `VE[8]S545  1 s 8 uart2RxStatusBuffer ]
+"70
+[v _uart2RxCount uart2RxCount `VEuc  1 e 1 0 ]
+"71
+[v _uart2RxLastError uart2RxLastError `VES545  1 s 1 uart2RxLastError ]
+"152 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1\MODBUS_IO_PIC18K42_ADC.X\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"271
+[v main@bits bits `uc  1 a 1 22 ]
+"270
+[v main@datas datas `uc  1 a 1 8 ]
+"269
+[v main@i_2887 i `i  1 a 2 16 ]
+"225
+[v main@i_2876 i `i  1 a 2 23 ]
+"268
+[v main@index_2886 index `uc  1 a 1 21 ]
+"243
+[v main@index index `uc  1 a 1 15 ]
+"222
+[v main@byte_count byte_count `uc  1 a 1 31 ]
+"361
+[v main@buff1 buff1 `*.39uc  1 a 2 0 ]
+"349
+[v main@i_2901 i `us  1 a 2 36 ]
+"347
+[v main@addr_start_2899 addr_start `us  1 a 2 27 ]
+"348
+[v main@quantity_regs_2900 quantity_regs `us  1 a 2 13 ]
+"313
+[v main@address address `us  1 a 2 11 ]
+"314
+[v main@value_2895 value `us  1 a 2 2 ]
+"293
+[v main@addr_start addr_start `us  1 a 2 29 ]
+"294
+[v main@quantity_regs quantity_regs `us  1 a 2 18 ]
+"258
+[v main@start_add_2883 start_add `us  1 a 2 40 ]
+"259
+[v main@quantity_output_2884 quantity_output `us  1 a 2 34 ]
+"260
+[v main@byte_count_2885 byte_count `uc  1 a 1 20 ]
+"238
+[v main@addr addr `us  1 a 2 32 ]
+"239
+[v main@value value `us  1 a 2 25 ]
+"217
+[v main@quantity_output quantity_output `us  1 a 2 38 ]
+"216
+[v main@start_add start_add `us  1 a 2 9 ]
+"154
+[v main@i i `ul  1 a 4 4 ]
+"390
+} 0
+"1000 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1/modbus/modbus_app_layer_slave.c
+[v _modbus_write_single_register_rsp modbus_write_single_register_rsp `(v  1 e 1 0 ]
+{
+[v modbus_write_single_register_rsp@address address `uc  1 a 1 wreg ]
+[v modbus_write_single_register_rsp@address address `uc  1 a 1 wreg ]
+[v modbus_write_single_register_rsp@reg_address reg_address `us  1 p 2 0 ]
+"1001
+[v modbus_write_single_register_rsp@reg_value reg_value `us  1 p 2 2 ]
+"1003
+[v modbus_write_single_register_rsp@address address `uc  1 a 1 42 ]
+"1009
+} 0
+"980
+[v _modbus_write_single_coil_rsp modbus_write_single_coil_rsp `(v  1 e 1 0 ]
+{
+[v modbus_write_single_coil_rsp@address address `uc  1 a 1 wreg ]
+[v modbus_write_single_coil_rsp@address address `uc  1 a 1 wreg ]
+[v modbus_write_single_coil_rsp@output_address output_address `us  1 p 2 0 ]
+"981
+[v modbus_write_single_coil_rsp@output_value output_value `us  1 p 2 2 ]
+[v modbus_write_single_coil_rsp@address address `uc  1 a 1 42 ]
+"991
+} 0
+"1123
+[v _modbus_write_multiple_registers_rsp modbus_write_multiple_registers_rsp `(v  1 e 1 0 ]
+{
+[v modbus_write_multiple_registers_rsp@address address `uc  1 a 1 wreg ]
+[v modbus_write_multiple_registers_rsp@address address `uc  1 a 1 wreg ]
+[v modbus_write_multiple_registers_rsp@start_address start_address `us  1 p 2 0 ]
+"1124
+[v modbus_write_multiple_registers_rsp@quantity quantity `us  1 p 2 2 ]
+[v modbus_write_multiple_registers_rsp@address address `uc  1 a 1 42 ]
+"1134
+} 0
+"1103
+[v _modbus_write_multiple_coils_rsp modbus_write_multiple_coils_rsp `(v  1 e 1 0 ]
+{
+[v modbus_write_multiple_coils_rsp@address address `uc  1 a 1 wreg ]
+[v modbus_write_multiple_coils_rsp@address address `uc  1 a 1 wreg ]
+[v modbus_write_multiple_coils_rsp@start_address start_address `us  1 p 2 0 ]
+"1104
+[v modbus_write_multiple_coils_rsp@quantity quantity `us  1 p 2 2 ]
+[v modbus_write_multiple_coils_rsp@address address `uc  1 a 1 42 ]
+"1114
+} 0
+"932
+[v _modbus_read_holding_registers_rsp modbus_read_holding_registers_rsp `(v  1 e 1 0 ]
+{
+[v modbus_read_holding_registers_rsp@address address `uc  1 a 1 wreg ]
+"934
+[v modbus_read_holding_registers_rsp@i i `uc  1 a 1 6 ]
+"932
+[v modbus_read_holding_registers_rsp@address address `uc  1 a 1 wreg ]
+[v modbus_read_holding_registers_rsp@byte_count byte_count `uc  1 p 1 0 ]
+"933
+[v modbus_read_holding_registers_rsp@reg_data reg_data `*.39us  1 p 2 1 ]
+"936
+[v modbus_read_holding_registers_rsp@address address `uc  1 a 1 5 ]
+"947
+} 0
+"887
+[v _modbus_read_coils_rsp modbus_read_coils_rsp `(v  1 e 1 0 ]
+{
+[v modbus_read_coils_rsp@address address `uc  1 a 1 wreg ]
+"888
+[v modbus_read_coils_rsp@i i `uc  1 a 1 3 ]
+"887
+[v modbus_read_coils_rsp@address address `uc  1 a 1 wreg ]
+[v modbus_read_coils_rsp@byte_count byte_count `uc  1 p 1 0 ]
+[v modbus_read_coils_rsp@coil_data coil_data `*.30uc  1 p 1 1 ]
+"890
+[v modbus_read_coils_rsp@address address `uc  1 a 1 2 ]
+"900
+} 0
+"116
+[v _modbus_kbhit modbus_kbhit `(E15917  1 e 1 0 ]
+{
+"139
+} 0
+"255 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1/modbus/modbus_phy_layer_rtu_slave.c
+[v _modbus_check_timeout modbus_check_timeout `(v  1 e 1 0 ]
+{
+"294
+} 0
+"199
+[v _modbus_timeout_now modbus_timeout_now `(v  1 e 1 0 ]
+{
+"248
+} 0
+"186
+[v _modbus_enable_timeout modbus_enable_timeout `(v  1 e 1 0 ]
+{
+[v modbus_enable_timeout@enable enable `E15917  1 a 1 wreg ]
+[v modbus_enable_timeout@enable enable `E15917  1 a 1 wreg ]
+[v modbus_enable_timeout@enable enable `E15917  1 a 1 14 ]
+"192
+} 0
+"84 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1/modbus/modbus_app_layer_slave.c
+[v _modbus_init modbus_init `(v  1 e 1 0 ]
+{
+"108
+} 0
+"1314
+[v _modbus_exception_rsp modbus_exception_rsp `(v  1 e 1 0 ]
+{
+[v modbus_exception_rsp@address address `uc  1 a 1 wreg ]
+[v modbus_exception_rsp@address address `uc  1 a 1 wreg ]
+[v modbus_exception_rsp@func func `us  1 p 2 0 ]
+[v modbus_exception_rsp@error error `E2  1 p 1 2 ]
+[v modbus_exception_rsp@address address `uc  1 a 1 42 ]
+"1318
+} 0
+"365 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1/modbus/modbus_phy_layer_rtu_slave.c
+[v _modbus_serial_send_stop modbus_serial_send_stop `(v  1 e 1 0 ]
+{
+"368
+[v modbus_serial_send_stop@j j `ul  1 a 4 36 ]
+"366
+[v modbus_serial_send_stop@crc_high crc_high `uc  1 a 1 41 ]
+[v modbus_serial_send_stop@crc_low crc_low `uc  1 a 1 40 ]
+"405
+} 0
+"163 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1\MODBUS_IO_PIC18K42_ADC.X\mcc_generated_files/uart1.c
+[v _UART1_is_tx_done UART1_is_tx_done `(a  1 e 1 0 ]
+{
+"165
+} 0
+"132 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1/modbus/modbus_phy_layer_rtu_slave.c
+[v _RCV_ON RCV_ON `(v  1 e 1 0 ]
+{
+"134
+[v RCV_ON@j j `i  1 a 2 14 ]
+"179
+} 0
+"343
+[v _modbus_serial_send_start modbus_serial_send_start `(v  1 e 1 0 ]
+{
+[v modbus_serial_send_start@to to `uc  1 a 1 wreg ]
+[v modbus_serial_send_start@to to `uc  1 a 1 wreg ]
+[v modbus_serial_send_start@func func `uc  1 p 1 36 ]
+[v modbus_serial_send_start@to to `uc  1 a 1 37 ]
+"359
+} 0
+"313
+[v _modbus_serial_putc modbus_serial_putc `(v  1 e 1 0 ]
+{
+[v modbus_serial_putc@c c `uc  1 a 1 wreg ]
+[v modbus_serial_putc@c c `uc  1 a 1 wreg ]
+"323
+[v modbus_serial_putc@c c `uc  1 a 1 35 ]
+"332
+} 0
+"300
+[v _modbus_calc_crc modbus_calc_crc `(v  1 e 1 0 ]
+{
+[v modbus_calc_crc@data data `uc  1 a 1 wreg ]
+"301
+[v modbus_calc_crc@uIndex uIndex `uc  1 a 1 15 ]
+"300
+[v modbus_calc_crc@data data `uc  1 a 1 wreg ]
+"303
+[v modbus_calc_crc@data data `uc  1 a 1 14 ]
+"307
+} 0
+"192 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1\MODBUS_IO_PIC18K42_ADC.X\mcc_generated_files/uart1.c
+[v _UART1_Write UART1_Write `(v  1 e 1 0 ]
+{
+[v UART1_Write@txData txData `uc  1 a 1 wreg ]
+"195
+[v UART1_Write@t t `us  1 a 2 33 ]
+"192
+[v UART1_Write@txData txData `uc  1 a 1 wreg ]
+[v UART1_Write@txData txData `uc  1 a 1 32 ]
+"201
+} 0
+"67 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1/modbus/source_7seg.c
+[v _app_led7_task app_led7_task `(v  1 e 1 0 ]
+{
+"137
+} 0
+"37
+[v _handle_value handle_value `(v  1 e 1 0 ]
+{
+"38
+[v handle_value@data data `us  1 a 2 28 ]
+"37
+[v handle_value@value value `us  1 p 2 26 ]
+"44
+} 0
+"7 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwmod@counter counter `uc  1 a 1 25 ]
+"7
+[v ___lwmod@dividend dividend `ui  1 p 2 21 ]
+[v ___lwmod@divisor divisor `ui  1 p 2 23 ]
+"25
+} 0
+"7 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwdiv@quotient quotient `ui  1 a 2 19 ]
+"11
+[v ___lwdiv@counter counter `uc  1 a 1 18 ]
+"7
+[v ___lwdiv@dividend dividend `ui  1 p 2 14 ]
+[v ___lwdiv@divisor divisor `ui  1 p 2 16 ]
+"30
+} 0
+"46 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1/modbus/source_7seg.c
+[v _display display `(v  1 e 1 0 ]
+{
+[v display@value value `uc  1 a 1 wreg ]
+"47
+[v display@datas datas `uc  1 a 1 17 ]
+"46
+[v display@value value `uc  1 a 1 wreg ]
+[v display@value value `uc  1 a 1 16 ]
+"56
+} 0
+"121 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1/modbus/modbus_phy_layer_rtu_slave.c
+[v _RCV_OFF RCV_OFF `(v  1 e 1 0 ]
+{
+"126
+} 0
+"442 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1\MODBUS_IO_PIC18K42_ADC.X\main.c
+[v _make8 make8 `(uc  1 e 1 0 ]
+{
+"443
+[v make8@value value `uc  1 a 1 20 ]
+"442
+[v make8@var var `us  1 p 2 14 ]
+[v make8@ofset ofset `uc  1 p 1 16 ]
+"447
+} 0
+"449
+[v _make16 make16 `(us  1 e 2 0 ]
+{
+[v make16@high high `uc  1 a 1 wreg ]
+"450
+[v make16@value value `us  1 a 2 21 ]
+"449
+[v make16@high high `uc  1 a 1 wreg ]
+[v make16@low low `uc  1 p 1 14 ]
+[v make16@high high `uc  1 a 1 20 ]
+"454
+} 0
+"428
+[v _load_eeprom load_eeprom `(v  1 e 1 0 ]
+{
+"432
+} 0
+"34 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1\MODBUS_IO_PIC18K42_ADC.X\eeprom.c
+[v _EEPROM_Read EEPROM_Read `(uc  1 e 1 0 ]
+{
+[v EEPROM_Read@Address Address `uc  1 a 1 wreg ]
+"36
+[v EEPROM_Read@Data Data `uc  1 a 1 15 ]
+"34
+[v EEPROM_Read@Address Address `uc  1 a 1 wreg ]
+"37
+[v EEPROM_Read@Address Address `uc  1 a 1 14 ]
+"46
+} 0
+"58 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1/modbus/source_7seg.c
+[v _app_led7_init app_led7_init `(v  1 e 1 0 ]
+{
+"65
+} 0
+"107 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1\MODBUS_IO_PIC18K42_ADC.X\mcc_generated_files/mcc.c
+[v _WWDT_SoftEnable WWDT_SoftEnable `(v  1 e 1 0 ]
+{
+"110
+} 0
+"50
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"63
+} 0
+"100
+[v _WWDT_Initialize WWDT_Initialize `(v  1 e 1 0 ]
+{
+"105
+} 0
+"86 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1\MODBUS_IO_PIC18K42_ADC.X\mcc_generated_files/uart1.c
+[v _UART1_Initialize UART1_Initialize `(v  1 e 1 0 ]
+{
+"153
+} 0
+"289
+[v _UART1_SetRxInterruptHandler UART1_SetRxInterruptHandler `(v  1 e 1 0 ]
+{
+[v UART1_SetRxInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 14 ]
+"291
+} 0
+"281
+[v _UART1_SetOverrunErrorHandler UART1_SetOverrunErrorHandler `(v  1 e 1 0 ]
+{
+[v UART1_SetOverrunErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 14 ]
+"283
+} 0
+"277
+[v _UART1_SetFramingErrorHandler UART1_SetFramingErrorHandler `(v  1 e 1 0 ]
+{
+[v UART1_SetFramingErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 14 ]
+"279
+} 0
+"285
+[v _UART1_SetErrorHandler UART1_SetErrorHandler `(v  1 e 1 0 ]
+{
+[v UART1_SetErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 14 ]
+"287
+} 0
+"65 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1\MODBUS_IO_PIC18K42_ADC.X\mcc_generated_files/tmr1.c
+[v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
+{
+"97
+} 0
+"166
+[v _TMR1_SetInterruptHandler TMR1_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v TMR1_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 14 ]
+"168
+} 0
+"70 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1\MODBUS_IO_PIC18K42_ADC.X\mcc_generated_files/tmr0.c
+[v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
+{
+"96
+} 0
+"156
+[v _TMR0_SetInterruptHandler TMR0_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v TMR0_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 14 ]
+"158
+} 0
+"81 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1\MODBUS_IO_PIC18K42_ADC.X\mcc_generated_files/mcc.c
+[v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
+{
+"98
+} 0
+"51 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1\MODBUS_IO_PIC18K42_ADC.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"139
+} 0
+"65 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1\MODBUS_IO_PIC18K42_ADC.X\mcc_generated_files/mcc.c
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+{
+"79
+} 0
+"52 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1\MODBUS_IO_PIC18K42_ADC.X\mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
+{
+"71
+} 0
+"62 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1\MODBUS_IO_PIC18K42_ADC.X\mcc_generated_files/adcc.c
+[v _ADCC_Initialize ADCC_Initialize `(v  1 e 1 0 ]
+{
+"110
+} 0
+"9 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1\MODBUS_IO_PIC18K42_ADC.X\eeprom.c
+[v _EEPROM_Write EEPROM_Write `(v  1 e 1 0 ]
+{
+[v EEPROM_Write@Address Address `uc  1 a 1 wreg ]
+"11
+[v EEPROM_Write@time time `us  1 a 2 16 ]
+"9
+[v EEPROM_Write@Address Address `uc  1 a 1 wreg ]
+[v EEPROM_Write@Data Data `uc  1 p 1 14 ]
+"11
+[v EEPROM_Write@Address Address `uc  1 a 1 15 ]
+"32
+} 0
+"83 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1\MODBUS_IO_PIC18K42_ADC.X\mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_InterruptManagerLow INTERRUPT_InterruptManagerLow `IIL(v  1 e 1 0 ]
+{
+"97
+} 0
+"202 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1\MODBUS_IO_PIC18K42_ADC.X\mcc_generated_files/uart2.c
+[v _UART2_Receive_ISR UART2_Receive_ISR `(v  1 e 1 0 ]
+{
+"226
+} 0
+"228
+[v _UART2_RxDataHandler UART2_RxDataHandler `(v  1 e 1 0 ]
+{
+"238
+} 0
+"491 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1/modbus/modbus_phy_layer_rtu_slave.c
+[v _incomming_hmi_serial incomming_hmi_serial `(v  1 e 1 0 ]
+{
+"495
+[v incomming_hmi_serial@c c `uc  1 a 1 10 ]
+"539
+} 0
+"154 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1\MODBUS_IO_PIC18K42_ADC.X\mcc_generated_files/tmr1.c
+[v _TMR1_ISR TMR1_ISR `(v  1 e 1 0 ]
+{
+"164
+} 0
+"124
+[v _TMR1_WriteTimer TMR1_WriteTimer `(v  1 e 1 0 ]
+{
+[v TMR1_WriteTimer@timerVal timerVal `us  1 p 2 9 ]
+"140
+} 0
+"170
+[v _TMR1_DefaultInterruptHandler TMR1_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"173
+} 0
+"132 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1\MODBUS_IO_PIC18K42_ADC.X\mcc_generated_files/tmr0.c
+[v _TMR0_ISR TMR0_ISR `(v  1 e 1 0 ]
+{
+"154
+} 0
+"160
+[v _TMR0_DefaultInterruptHandler TMR0_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"163
+} 0
+"73 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1\MODBUS_IO_PIC18K42_ADC.X\mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_InterruptManagerHigh INTERRUPT_InterruptManagerHigh `IIH(v  1 e 1 0 ]
+{
+"81
+} 0
+"229 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1\MODBUS_IO_PIC18K42_ADC.X\mcc_generated_files/uart1.c
+[v _UART1_Receive_ISR UART1_Receive_ISR `(v  1 e 1 0 ]
+{
+"252
+} 0
+"254
+[v _UART1_RxDataHandler UART1_RxDataHandler `(v  1 e 1 0 ]
+{
+"265
+} 0
+"413 D:\LapTrinh PIC C\MODBUS\CODE MODBUS IO1/modbus/modbus_phy_layer_rtu_slave.c
+[v _incomming_modbus_serial incomming_modbus_serial `(v  1 e 1 0 ]
+{
+"414
+[v incomming_modbus_serial@c c `uc  1 a 1 4 ]
+"489
+} 0
+"186
+[v i2_modbus_enable_timeout modbus_enable_timeout `(v  1 e 1 0 ]
+{
+[v i2modbus_enable_timeout@enable enable `E15917  1 a 1 wreg ]
+[v i2modbus_enable_timeout@enable enable `E15917  1 a 1 wreg ]
+[v i2modbus_enable_timeout@enable enable `E15917  1 a 1 0 ]
+"192
+} 0
+"300
+[v i2_modbus_calc_crc modbus_calc_crc `(v  1 e 1 0 ]
+{
+[v i2modbus_calc_crc@data data `uc  1 a 1 wreg ]
+"301
+[v i2modbus_calc_crc@uIndex uIndex `uc  1 a 1 1 ]
+"300
+[v i2modbus_calc_crc@data data `uc  1 a 1 wreg ]
+"303
+[v i2modbus_calc_crc@data data `uc  1 a 1 0 ]
+"307
+} 0
